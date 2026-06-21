@@ -63,8 +63,16 @@ def pad_id_sequence(ids, max_len, pad_id):
     
     return ids
 
-# Step 6 - stack_padded_sequences_to_batch (not yet solved)
-# TODO: implement
+# Step 6 - stack_padded_sequences_to_batch
+import torch
+
+def stack_padded_sequences_to_batch(padded_sequences):
+    res = []
+
+    for tensor in padded_sequences:
+        res.append(tensor)
+    
+    return torch.tensor(res)
 
 # Step 7 - scale_embeddings_by_sqrt_d_model (not yet solved)
 # TODO: implement
